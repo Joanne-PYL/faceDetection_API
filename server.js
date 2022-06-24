@@ -13,10 +13,8 @@ const db = knex({
     client: 'pg',
     connection: {
         //   socketPath : '/path/to/socket.sock',
-        host : 'postgresql-convex-01909',
-        user : '',
-        password : '',
-        database : 'smart-brain'
+        host : 'process.env.DATABASE_URL',
+        ssl: true
     }
   });
 
